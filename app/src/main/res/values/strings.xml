@@ -2,4 +2,7 @@
     <string name="app_name">Sudoku</string>
     <string name="title_play">Play</string>
     <string name="title_create">Create</string>
+    <string name="easy_difficulty">EASY</string>
+    <string name="medium_difficulty">MEDIUM</string>
+    <string name="hard_difficulty">HARD</string>
 </resources>
