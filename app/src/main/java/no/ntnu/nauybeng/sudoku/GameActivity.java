@@ -1,13 +1,14 @@
 package no.ntnu.nauybeng.sudoku;
 
 import android.app.Activity;
-
-/**
- * Created by admin on 06.11.2017.
- */
+import android.os.Bundle;
 
 public class GameActivity extends Activity {
 
-
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_game);
+    }
 
 }
