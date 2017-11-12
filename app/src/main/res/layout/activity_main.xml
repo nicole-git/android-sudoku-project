@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10pt"
-    tools:context="no.ntnu.nauybeng.sudoku.MainActivity">
+    tools:context="no.ntnu.nauybeng.sudoku.activity.MainActivity">
 
     <Button
         android:id="@+id/playGameBtn"
