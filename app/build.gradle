@@ -26,6 +26,8 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support:design:26.+'
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    compile group: 'com.google.guava', name: 'guava', version: '23.4-android'
     testCompile 'junit:junit:4.12'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 }
