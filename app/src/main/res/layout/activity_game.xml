@@ -9,10 +9,14 @@
     <GridView
         android:id="@+id/sudokuGrid"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:numColumns="9"
-        android:verticalSpacing="2dp"
+        android:layout_height="wrap_content"
         android:horizontalSpacing="2dp"
-        />
+        android:numColumns="9"
+        android:verticalSpacing="2dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/checkSolutionBtn" />
 
 </LinearLayout>

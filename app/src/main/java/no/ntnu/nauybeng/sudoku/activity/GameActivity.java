@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.GridView;
-import android.widget.Toast;
 
 import no.ntnu.nauybeng.sudoku.BoardUtil;
 import no.ntnu.nauybeng.sudoku.R;
@@ -20,7 +19,8 @@ public class GameActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         String mode = getIntent().getStringExtra("game_mode");
-        final EditText[][] board = BoardUtil.getGameBoard(this);
+
+        final EditText[][] board = BoardUtil.getGameBoard(this, mode);
 
         GridView gridview = findViewById(R.id.sudokuGrid);
         gridview.setAdapter(new EditTextAdapter(board));

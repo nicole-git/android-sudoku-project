@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="10pt">
 
-    <FrameLayout
-        android:id="@+id/content"
+    <GridView
+        android:id="@+id/sudokuGrid"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="2dp"
+        android:numColumns="9"
+        android:verticalSpacing="2dp" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Create game" />
-    </FrameLayout>
+    <Spinner
+        android:id="@+id/difficulySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/difficulties" />
+
+    <Button
+        android:id="@+id/saveBoardBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/saveBoardBtn" />
 
 </LinearLayout>

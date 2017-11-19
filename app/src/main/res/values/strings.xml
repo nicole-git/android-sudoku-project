@@ -5,4 +5,11 @@
     <string name="easy_difficulty">EASY</string>
     <string name="medium_difficulty">MEDIUM</string>
     <string name="hard_difficulty">HARD</string>
+    <string name="saveBoardBtn">Save board</string>
+    <string name="checkSolutionBtn">Check solution</string>
+    <string-array name="difficulties">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+    </string-array>
 </resources>
