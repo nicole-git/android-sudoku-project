@@ -1,6 +1,7 @@
 package no.ntnu.nauybeng.sudoku;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.view.Gravity;
@@ -9,12 +10,9 @@ import android.widget.GridView;
 
 import com.google.common.collect.ImmutableMap;
 
-import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.Scanner;
 
 public class BoardUtil {
 
@@ -30,15 +28,8 @@ public class BoardUtil {
             darkOrange, darkGrey
     );
 
-    public static Map<String, Integer> difficultyBoardMap = ImmutableMap.of(
-            "easy", R.raw.boards_easy,
-            "medium", R.raw.boards_medium,
-            "hard", R.raw.boards_hard
-    );
-
     public static EditText[][] getGameBoard(Context context, String mode) {
-        InputStream inputStream = context.getResources().openRawResource(difficultyBoardMap.get(mode));
-        List<String> boardStrings = readResourceToStringList(inputStream);
+        List<String> boardStrings = BoardStorageUtil.readBoardsAsList(context, mode);
         String boardString = boardStrings.get(new Random().nextInt(boardStrings.size()));
         EditText[][] board = new EditText[9][9];
         for (int i = 0; i < boardString.length(); i++) {
@@ -58,8 +49,12 @@ public class BoardUtil {
     private static EditText getEditText(Context context, int position, char c) {
         String boardColors = "111000111111000111111000111000111000000111000000111000111000111111000111111000111";
         EditText editText = new EditText(context);
+        editText.setTextColor(0xFF4477AA);
+        editText.setTypeface(null, Typeface.BOLD);
         if (c != '0') {
             editText.setText(String.valueOf(c));
+            editText.setEnabled(false);
+            editText.setTextColor(0xFF333333);
         }
         editText.setInputType(InputType.TYPE_CLASS_NUMBER);
         editText.setLayoutParams(new GridView.LayoutParams(100, 100));
@@ -84,15 +79,21 @@ public class BoardUtil {
         return boardString.toString();
     }
 
-    private static List<String> readResourceToStringList(InputStream inputStream) {
-        Scanner scanner = new Scanner(inputStream);
-        scanner.useDelimiter(System.getProperty("line.separator"));
-        List<String> boardStrings = new ArrayList<>();
-        while (scanner.hasNext()) {
-            boardStrings.add(scanner.next().trim());
+    public static int[][] getNumbers(EditText[][] board) {
+        int[][] numbers = new int[9][9];
+        for (int row = 0; row < 9; row++) {
+            for (int col = 0; col < 9; col++) {
+                numbers[row][col] = getNumber(board[row][col]);
+            }
         }
-        scanner.close();
-        return boardStrings;
+        return numbers;
     }
 
+    private static int getNumber(EditText editText) {
+        try {
+            return Integer.parseInt(editText.getText().toString());
+        } catch (Exception expected) {
+            return 0;
+        }
+    }
 }

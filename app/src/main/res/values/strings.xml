@@ -7,6 +7,10 @@
     <string name="hard_difficulty">HARD</string>
     <string name="saveBoardBtn">Save board</string>
     <string name="checkSolutionBtn">Check solution</string>
+    <string name="boardSaveWorked">Board saved successfully</string>
+    <string name="boardSaveFailed">Failed to save board</string>
+    <string name="correctSolution">Correct!</string>
+    <string name="incorrectSolution">Incorrect :/</string>
     <string-array name="difficulties">
         <item>Easy</item>
         <item>Medium</item>
