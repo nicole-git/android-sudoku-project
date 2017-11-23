@@ -2,6 +2,8 @@
     <string name="app_name">Sudoku</string>
     <string name="title_play">Play</string>
     <string name="title_create">Create</string>
+    <string name="settingsBtn">Settings</string>
+    <string name="instructionsBtn">Instructions</string>
     <string name="easy_difficulty">EASY</string>
     <string name="medium_difficulty">MEDIUM</string>
     <string name="hard_difficulty">HARD</string>
@@ -11,6 +13,9 @@
     <string name="boardSaveFailed">Failed to save board</string>
     <string name="correctSolution">Correct!</string>
     <string name="incorrectSolution">Incorrect :/</string>
+    <string name="use_english_language">Use English language</string>
+    <string name="use_norwegian_language">Use Norwegian language</string>
+    <string name="game_instructions">To mark a cell you\'re unsure about: Tap and hold. \nEverything else should be self-explanatory.</string>
     <string-array name="difficulties">
         <item>Easy</item>
         <item>Medium</item>

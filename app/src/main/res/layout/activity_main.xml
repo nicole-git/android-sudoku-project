@@ -22,4 +22,18 @@
         android:text="@string/title_create"
         android:visibility="visible" />
 
+    <Button
+        android:id="@+id/settingsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settingsBtn"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/instructionBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/instructionsBtn"
+        android:visibility="visible" />
+
 </LinearLayout>

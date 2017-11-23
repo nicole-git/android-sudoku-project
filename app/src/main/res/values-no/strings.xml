@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Sudoku</string>
+    <string name="title_play">Spill</string>
+    <string name="title_create">Lag brett</string>
+    <string name="settingsBtn">Innstillinger</string>
+    <string name="instructionsBtn">Instruksjoner</string>
+    <string name="easy_difficulty">LETT</string>
+    <string name="medium_difficulty">MEDIUM</string>
+    <string name="hard_difficulty">Vanskelig</string>
+    <string name="saveBoardBtn">Lagre brett</string>
+    <string name="checkSolutionBtn">Sjekk løsning</string>
+    <string name="boardSaveWorked">Brett lagret</string>
+    <string name="boardSaveFailed">Noe gikk galt under lagring av brettet</string>
+    <string name="correctSolution">Riktig!</string>
+    <string name="incorrectSolution">Feil :/</string>
+    <string name="use_english_language">Bruk Engelsk språk</string>
+    <string name="use_norwegian_language">Bruk Norsk Språk</string>
+    <string name="game_instructions">For å markere en rute du er usikker på: Press og hold. Ellers er appen ganske selvforklarende.</string>
+    <string-array name="difficulties">
+        <item>Lett</item>
+        <item>Medium</item>
+        <item>Vanskelig</item>
+    </string-array>
+</resources>
